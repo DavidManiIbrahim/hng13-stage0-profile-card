@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-card">
+        <!-- Profile Picture -->
+        <div class="profile-image">
+            <img src="owner.jpg" alt="Profile Picture" data-testid="profilePicture">
+        </div>
+
+        <!-- Profile Info -->
+        <div class="profile-info">
+            <h2 data-testid="fullName">David Mani Ibrahim</h2>
+            <p data-testid="jobTitle">Web Developer, Tech Enthusiast, Blogger</p>
+            <p data-testid="shortBio">
+                Passionate about building web solutions that enhance user experience. 
+                I love coding, blogging, and exploring new tech trends.
+            </p>
+            <p data-testid="currentLocation">Jalingo, Nigeria</p>
+            <p data-testid="emailAddress">DavidManiIbrahim@gmail.com</p>
+
+            <!-- Social Links -->
+            <div class="social-links" data-testid="socialLinks">
+                <a href="https://shorturl.at/TLFQj" target="_blank">LinkedIn</a>
+                <a href="https://github.com/davidmaniibrahim" target="_blank">GitHub</a>
+                <a href="https://x.com/mani_ibrah18135" target="_blank">X</a>
+            </div>
+
+            <!-- Current UTC Time -->
+            <p data-testid="currentTimeUTC" id="utcTime"></p>
+        </div>
+
+        <!-- Profile Actions -->
+        <div class="profile-actions">
+            <button onclick="follow()">Follow</button>
+            <button onclick="message()">Message</button>
+        </div>
+    </div>
+
+    <script src="main.js"> </script>
+</body>
+    </html>
