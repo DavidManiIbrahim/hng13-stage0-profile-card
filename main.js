@@ -1,14 +1,15 @@
-function follow() {
-    alert("You are now following David Mani Ibrahim!");
-}
 
-function message() {
-    alert("Message sent to David Mani Ibrahim!");
-}
+
 
 function updateTime() {
-    const utcTimeElement = document.getElementById("utcTime")
-    const now = new Date()
-    utcTimeElement.textContent = `Current UTC Time: ${now.toUTCString()}`
-
+    const utcTimeElement = document.getElementById("utcTime");
+    const msElement = document.getElementById("currentTime");
+    const now = new Date();
+    // // Show UTC time in milliseconds
+    // msElement.textContent = now.getTime();
+    // Show UTC string
+    utcTimeElement.textContent = `Current Time UTC: ${now.toUTCString()}`;
 }
+
+setInterval(updateTime, 100);
+updateTime();

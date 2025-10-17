@@ -3,45 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Profile Card</title>
+    <title>David Mani Ibrahim - Profile Card</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="hng.png" type="image/x-icon">
 </head>
 <body>
-    <div class="profile-card">
-        <!-- Profile Picture -->
-        <div class="profile-image">
-            <img src="owner.jpg" alt="Profile Picture" data-testid="profilePicture">
-        </div>
+    <main>
+        <article class="profile-card" data-testid="test-profile-card">
+            <figure class="profile-image">
+                <img src="owner.jpg" alt="David Mani Ibrahim's profile photo" data-testid="test-user-avatar">
+            </figure>
 
-        <!-- Profile Info -->
-        <div class="profile-info">
-            <h2 data-testid="fullName">David Mani Ibrahim</h2>
-            <p data-testid="jobTitle">Web Developer, Tech Enthusiast, Blogger</p>
-            <p data-testid="shortBio">
-                Passionate about building web solutions that enhance user experience. 
-                I love coding, blogging, and exploring new tech trends.
-            </p>
-            <p data-testid="currentLocation">Jalingo, Nigeria</p>
-            <p data-testid="emailAddress">DavidManiIbrahim@gmail.com</p>
+            <div class="profile-content">
+                <header>
+                    <h1 data-testid="test-user-name">David Mani Ibrahim</h1>
+                    <p data-testid="test-user-bio">
+                        Passionate web developer and tech enthusiast based in Jalingo, Nigeria. 
+                        I love building accessible web solutions that enhance user experience.
+                    </p>
+                </header>
 
-            <!-- Social Links -->
-            <div class="social-links" data-testid="socialLinks">
-                <a href="https://shorturl.at/TLFQj" target="_blank">LinkedIn</a>
-                <a href="https://github.com/davidmaniibrahim" target="_blank">GitHub</a>
-                <a href="https://x.com/mani_ibrah18135" target="_blank">X</a>
+                <section class="time-section">
+                   
+                    
+                    <p data-testid="currentTimeUTC" id="utcTime">Current Time:</p>
+                </section>
+
+                <nav class="social-links" data-testid="test-user-social-links">
+                    <a href="https://" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
+                    <a href="https://github.com/davidmaniibrahim" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
+                    <a href="https://x.com/mani_ibrah18135" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a>
+                </nav>
+
+                <section class="interests">
+                    <h2>Interests</h2>
+                    <div class="lists-container">
+                        <div class="hobbies">
+                            <h3>Hobbies</h3>
+                            <ul data-testid="test-user-hobbies">
+                                <li>Coding</li>
+                                <li>Blogging</li>
+                                <li>Reading Tech Articles</li>
+                                <li>Learning New Technologies</li>
+                            </ul>
+                        </div>
+
+                        <div class="dislikes">
+                            <h3>Dislikes</h3>
+                            <ul data-testid="test-user-dislikes">
+                                <li>Procrastination</li>
+                                <li>Poor Documentation</li>
+                                <li>Inaccessible Websites</li>
+                                <li>Unreliable Internet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="profile-actions">
+                    <button type="button" onclick="follow()">Follow</button>
+                    <button type="button" onclick="message()">Message</button>
+                </footer>
             </div>
+        </article>
+    </main>
 
-            <!-- Current UTC Time -->
-            <p data-testid="currentTimeUTC" id="utcTime"></p>
-        </div>
-
-        <!-- Profile Actions -->
-        <div class="profile-actions">
-            <button onclick="follow()">Follow</button>
-            <button onclick="message()">Message</button>
-        </div>
-    </div>
-
-    <script src="main.js"> </script>
+    <script src="main.js"></script>
 </body>
-    </html>
+</html>
