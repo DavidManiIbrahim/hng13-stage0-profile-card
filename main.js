@@ -5,8 +5,7 @@ function updateTime() {
     const utcTimeElement = document.getElementById("utcTime");
     const msElement = document.getElementById("currentTime");
     const now = new Date();
-    // // Show UTC time in milliseconds
-    // msElement.textContent = now.getTime();
+   
     // Show UTC string
     utcTimeElement.textContent = `Current Time UTC: ${now.toUTCString()}`;
 }
